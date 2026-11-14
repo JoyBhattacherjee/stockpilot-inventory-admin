@@ -60,3 +60,7 @@ export function createApp() {
   app.use(errorHandler);
   return app;
 }
+
+// Default export so serverless hosts (e.g. Vercel) can use the app directly.
+// Local/long-running servers still start via src/index.js.
+export default createApp();

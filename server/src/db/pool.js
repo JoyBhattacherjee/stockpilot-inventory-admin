@@ -8,7 +8,7 @@ pg.types.setTypeParser(20, (v) => (v === null ? null : parseInt(v, 10)));
 export const pool = new pg.Pool({
   connectionString: config.databaseUrl,
   ssl: config.databaseSsl ? { rejectUnauthorized: false } : undefined,
-  max: 10,
+  max: Number(process.env.DB_POOL_MAX || 10), // use 1-3 on serverless hosts
 });
 
 export const query = (text, params) => pool.query(text, params);
