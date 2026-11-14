@@ -1,0 +1,16 @@
+{
+  "name": "stockpilot-inventory-admin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack inventory management admin panel: React + Node.js/Express + PostgreSQL, with role-based access.",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "db:reset": "npm --prefix server run db:reset",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test"
+  },
+  "license": "MIT"
+}
