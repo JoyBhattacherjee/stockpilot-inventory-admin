@@ -10,7 +10,13 @@
     "dev:client": "npm --prefix client run dev",
     "build": "npm --prefix client run build",
     "start": "npm --prefix server start",
-    "test": "npm --prefix server test"
+    "test": "npm --prefix server test",
+    "test:e2e": "vitest run"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "testdriverai": "^7.11.171",
+    "vitest": "^5.1.0"
   },
   "license": "MIT"
 }
